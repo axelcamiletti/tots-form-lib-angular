@@ -3,9 +3,14 @@
  */
 
 /**
- * Entites
+ * Entities
  */
 export * from './lib/entities/tots-field-form';
+
+/**
+ * Fields
+ */
+export * from './lib/fields/string-field/string-field.component';
 
 /**
  * Components

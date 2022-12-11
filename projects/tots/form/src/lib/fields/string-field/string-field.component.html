@@ -1,0 +1,5 @@
+<mat-form-field *ngIf="input" class="{{getClases()}}" [appearance]="getAppearance()">
+    <mat-label *ngIf="field.label"> {{ field.label }} </mat-label>
+    <input matInput type="text" [formControl]="input" [placeholder]="getPlaceholder()" [disabled]="isDisabled()" />
+    <mat-hint *ngIf="getCaption() != ''" [align]="'end'"> {{getCaption()}} </mat-hint>
+</mat-form-field>
