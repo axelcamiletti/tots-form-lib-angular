@@ -3,5 +3,39 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "@tots/form": {
+      "projectType": "library",
+      "root": "projects/tots/form",
+      "sourceRoot": "projects/tots/form/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/tots/form/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/tots/form/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/tots/form/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tots/form/src/test.ts",
+            "tsConfig": "projects/tots/form/tsconfig.spec.json",
+            "karmaConfig": "projects/tots/form/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "80ffdf0b-2c1f-4805-b5f0-8bf5260cc100"
   }
 }
