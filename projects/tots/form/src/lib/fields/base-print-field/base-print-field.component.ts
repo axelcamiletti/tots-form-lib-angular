@@ -1,0 +1,25 @@
+import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
+import { UntypedFormGroup } from '@angular/forms';
+import { TotsFieldForm } from '../../entities/tots-field-form';
+
+@Component({
+  selector: 'tots-base-print-field',
+  templateUrl: './base-print-field.component.html',
+  styleUrls: ['./base-print-field.component.scss']
+})
+export class BasePrintFieldComponent implements OnInit {
+
+  @Input() field!: TotsFieldForm;
+  @Input() group!: UntypedFormGroup;
+
+  constructor(
+    protected viewContainerRef: ViewContainerRef
+  ) { }
+
+  ngOnInit(): void {
+    const view = this.viewContainerRef.createComponent(this.field.component);
+    (<any>view.instance).group = this.group;
+    (<any>view.instance).field = this.field;
+  }
+
+}

@@ -1,0 +1,13 @@
+<form [formGroup]="group">
+    <div class="tots-form-print">
+        <tots-base-print-field *ngFor="let field of fields" [field]="field" [group]="group"></tots-base-print-field>
+    </div>
+
+    <!--<div *ngIf="!group.valid && !isFirstStart" class="message-error">
+        <p *ngFor="let error of getErrors()">
+            {{ error }}
+        </p>
+    </div>-->
+
+    <!--<button *ngIf="config.hasSubmit" type="submit" [disabled]="!group.valid">Submit</button>-->
+</form>
