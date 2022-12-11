@@ -19,6 +19,10 @@ export class TotsFormHelper {
         if(field.extra && field.extra.default_value){
           newInput.setValue(field.extra.default_value);
         }
+        // if disable
+        if(field.extra && field.extra.disabled){ 
+            newInput.disable();
+        }
         // Add in Group
         group.addControl(field.key, newInput);
         // Return control

@@ -18,7 +18,7 @@ export class FormComponentComponent implements OnInit {
 
   configForm() {
     this.fields = [
-      { key: 'title', component: StringFieldComponent, label: 'Titulo', extra: { caption: 'Este se mostrara publicamente...' } }
+      { key: 'title', component: StringFieldComponent, label: 'Titulo', extra: { caption: 'Este se mostrara publicamente...', disabled: true } }
     ];
   }
 }
