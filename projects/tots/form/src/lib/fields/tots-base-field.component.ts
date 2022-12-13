@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, EventEmitter, Input, OnInit } from "@angular/core";
 import { UntypedFormControl, UntypedFormGroup } from "@angular/forms";
+import { Subject } from "rxjs";
+import { TotsActionForm } from "../entities/tots-action-form";
 import { TotsFieldForm } from "../entities/tots-field-form";
 import { TotsFormHelper } from "../helpers/tots-form-helper";
 
@@ -11,6 +13,7 @@ export class TotsBaseFieldComponent implements OnInit {
 
     @Input() field!: TotsFieldForm;
     @Input() group!: UntypedFormGroup;
+    @Input() onAction!: Subject<TotsActionForm>;
 
     input!: UntypedFormControl;
 
@@ -38,5 +41,13 @@ export class TotsBaseFieldComponent implements OnInit {
     isDisabled(): boolean {
         if(this.field.extra && this.field.extra.disabled){ return this.field.extra.disabled; }
         return false;
+    }
+
+    static updateFormByItem(group: UntypedFormGroup, item: any, field: TotsFieldForm) {
+        group.get(field.key)?.setValue(item[field.key]);
+    }
+
+    static updateItemByForm(group: UntypedFormGroup, item: any, field: TotsFieldForm) {
+        item[field.key] = group.get(field.key)?.value;
     }
 }

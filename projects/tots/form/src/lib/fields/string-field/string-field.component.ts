@@ -15,5 +15,5 @@ export class StringFieldComponent extends TotsBaseFieldComponent implements OnIn
   getCaption() {
     if(this.field.extra && this.field.extra.caption){ return this.field.extra.caption; }
     return '';
-}
+  }
 }

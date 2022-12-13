@@ -1,6 +1,6 @@
 <form [formGroup]="group">
     <div class="tots-form-print">
-        <tots-base-print-field *ngFor="let field of fields" [field]="field" [group]="group"></tots-base-print-field>
+        <tots-base-print-field *ngFor="let field of fields" [field]="field" [group]="group" [onAction]="privateActions"></tots-base-print-field>
     </div>
 
     <!--<div *ngIf="!group.valid && !isFirstStart" class="message-error">
@@ -8,6 +8,4 @@
             {{ error }}
         </p>
     </div>-->
-
-    <!--<button *ngIf="config.hasSubmit" type="submit" [disabled]="!group.valid">Submit</button>-->
 </form>
