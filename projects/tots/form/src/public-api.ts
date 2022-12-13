@@ -6,11 +6,14 @@
  * Entities
  */
 export * from './lib/entities/tots-field-form';
+export * from './lib/entities/tots-action-form';
 
 /**
  * Fields
  */
 export * from './lib/fields/string-field/string-field.component';
+export * from './lib/fields/submit-button-field/submit-button-field.component';
+export * from './lib/fields/select-field/select-field.component';
 
 /**
  * Components

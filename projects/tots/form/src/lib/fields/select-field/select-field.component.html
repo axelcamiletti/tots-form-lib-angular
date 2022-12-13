@@ -1,0 +1,9 @@
+<mat-form-field *ngIf="input" [appearance]="getAppearance()" class="{{getClases()}}">
+    <mat-label *ngIf="field.label"> {{ field.label }} </mat-label>
+
+    <mat-select [formControl]="input" [placeholder]="getPlaceholder()">
+        <mat-option *ngFor="let option of field.extra.options" [value]="option.id"> {{ option.title }} </mat-option>
+    </mat-select>
+
+    <mat-hint *ngIf="getCaption() != ''" [align]="'end'"> {{getCaption()}} </mat-hint>
+</mat-form-field>

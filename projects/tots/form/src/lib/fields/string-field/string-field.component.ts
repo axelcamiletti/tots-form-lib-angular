@@ -8,10 +8,6 @@ import { TotsBaseFieldComponent } from '../tots-base-field.component';
 })
 export class StringFieldComponent extends TotsBaseFieldComponent implements OnInit {
 
-  constructor() {
-    super();
-  }
-
   getCaption() {
     if(this.field.extra && this.field.extra.caption){ return this.field.extra.caption; }
     return '';

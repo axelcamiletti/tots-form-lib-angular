@@ -14,6 +14,7 @@ import { TotsFormComponent } from './components/tots-form/tots-form.component';
 import { BasePrintFieldComponent } from './fields/base-print-field/base-print-field.component';
 import { StringFieldComponent } from './fields/string-field/string-field.component';
 import { SubmitButtonFieldComponent } from './fields/submit-button-field/submit-button-field.component';
+import { SelectFieldComponent } from './fields/select-field/select-field.component';
 
 
 
@@ -22,7 +23,8 @@ import { SubmitButtonFieldComponent } from './fields/submit-button-field/submit-
     TotsFormComponent,
     BasePrintFieldComponent,
     StringFieldComponent,
-    SubmitButtonFieldComponent
+    SubmitButtonFieldComponent,
+    SelectFieldComponent
   ],
   imports: [
     CommonModule,
