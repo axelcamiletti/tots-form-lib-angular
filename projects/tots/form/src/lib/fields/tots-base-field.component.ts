@@ -25,7 +25,7 @@ export class TotsBaseFieldComponent implements OnInit {
 
     getAppearance() {
         if(this.field.extra && this.field.extra.appearance){ return this.field.extra.appearance; }
-        return 'standard';
+        return 'fill';
     }
 
     getClases() {
