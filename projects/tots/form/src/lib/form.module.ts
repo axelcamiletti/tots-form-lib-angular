@@ -8,23 +8,30 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 /** Components */
 import { TotsFormComponent } from './components/tots-form/tots-form.component';
+
+/** Fields */
 import { BasePrintFieldComponent } from './fields/base-print-field/base-print-field.component';
 import { StringFieldComponent } from './fields/string-field/string-field.component';
 import { SubmitButtonFieldComponent } from './fields/submit-button-field/submit-button-field.component';
 import { SelectFieldComponent } from './fields/select-field/select-field.component';
+import { TotsFormModalComponent } from './modals/tots-form-modal/tots-form-modal.component';
 
 
 
 @NgModule({
   declarations: [
+    // Components
     TotsFormComponent,
+    // Fields
     BasePrintFieldComponent,
     StringFieldComponent,
     SubmitButtonFieldComponent,
-    SelectFieldComponent
+    SelectFieldComponent,
+    TotsFormModalComponent
   ],
   imports: [
     CommonModule,
@@ -36,6 +43,7 @@ import { SelectFieldComponent } from './fields/select-field/select-field.compone
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
+    MatDialogModule,
   ],
   exports: [
     TotsFormComponent
