@@ -3,6 +3,11 @@
  */
 
 /**
+ * Services
+ */
+export * from './lib/services/tots-form-api.service';
+
+/**
  * Modules
  */
 export * from './lib/form-api.module';

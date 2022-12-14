@@ -7,6 +7,7 @@
  */
 export * from './lib/entities/tots-field-form';
 export * from './lib/entities/tots-action-form';
+export * from './lib/entities/tots-modal-config';
 
 /**
  * Services
