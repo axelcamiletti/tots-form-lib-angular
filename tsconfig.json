@@ -5,6 +5,9 @@
     "paths": {
       "@tots/form": [
         "dist/tots/form"
+      ],
+      "@tots/form-api": [
+        "dist/tots/form-api"
       ]
     },
     "baseUrl": "./",

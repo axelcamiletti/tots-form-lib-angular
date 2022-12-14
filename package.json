@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build2": "ng build --project=@tots/form --configuration production && cd dist/tots/form/ && npm publish --access public",
+    "build3": "ng build --project=@tots/form-api --configuration production && cd dist/tots/form-api/ && npm publish --access public",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
