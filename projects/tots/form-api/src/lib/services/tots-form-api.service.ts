@@ -22,9 +22,9 @@ export class TotsFormApiService {
     return dialogRef.componentInstance.actions.
     pipe(switchMap(action => this.verifyActionIfSubmit(config, action)))
     .pipe(catchError((err, obs) => {
-      return of(false);
+      return obs;
     }))
-    .pipe(tap(item => item !== false ? dialogRef.close() : undefined));
+    .pipe(tap(item => (item !== false&&item !== undefined) ? dialogRef.close() : undefined));
   }
 
   verifyActionIfSubmit(config: TotsFormModalApiConfig, action: TotsActionForm): Observable<any> {
