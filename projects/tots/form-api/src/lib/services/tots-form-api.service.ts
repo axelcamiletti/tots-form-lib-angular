@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { TotsActionForm, TotsFormModalComponent, TotsFormModalService } from '@tots/form';
-import { Observable, of, switchMap, tap } from 'rxjs';
+import { catchError, Observable, of, switchMap, tap } from 'rxjs';
 import { TotsFormModalApiConfig } from '../entities/tots-form-modal-api-config';
 
 @Injectable({
@@ -21,6 +21,9 @@ export class TotsFormApiService {
     });
     return dialogRef.componentInstance.actions.
     pipe(switchMap(action => this.verifyActionIfSubmit(config, action)))
+    .pipe(catchError((err, obs) => {
+      return of(false);
+    }))
     .pipe(tap(item => item !== false ? dialogRef.close() : undefined));
   }
 
