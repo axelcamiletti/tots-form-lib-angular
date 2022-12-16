@@ -3,6 +3,11 @@
  */
 
 /**
+ * Entities
+ */
+export * from './lib/entities/tots-form-modal-api-config';
+
+/**
  * Services
  */
 export * from './lib/services/tots-form-api.service';
