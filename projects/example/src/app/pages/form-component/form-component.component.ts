@@ -45,7 +45,8 @@ export class FormComponentComponent implements OnInit {
   onClickOpenModal() {
     let config = new TotsModalConfig();
     config.title = 'Modal de ejemplo';
-    config.item = {};
+    config.autoSave = true;
+    config.item = this.item;
     config.fields = [
       // Campo string
       { key: 'title', component: StringFieldComponent, label: 'Titulo', validators: [Validators.required], extra: { caption: 'Este se mostrara publicamente...' } },

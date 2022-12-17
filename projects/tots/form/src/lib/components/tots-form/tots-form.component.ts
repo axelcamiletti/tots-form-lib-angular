@@ -30,6 +30,7 @@ export class TotsFormComponent implements OnInit {
 
   ngAfterViewInit(): void {
     this.updateFormByItem();
+    this.activateAutoSave();
   }
 
   updateFormByItem() {
@@ -59,9 +60,14 @@ export class TotsFormComponent implements OnInit {
       action.item = this.updateItemByForm();
       this.onAction.emit(action);
     });
+  }
 
-    if(this.autoSave){
-      this.group.valueChanges.subscribe(values => this.updateItemByForm());
+  activateAutoSave() {
+    if(!this.autoSave){
+      return 
     }
+    this.group.valueChanges.subscribe(values => {
+      this.updateItemByForm();
+    });
   }
 }
