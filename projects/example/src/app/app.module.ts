@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponentComponent } from './pages/form-component/form-component.component';
 
 import { TotsFormModule } from 'projects/tots/form/src/public-api';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TotsFormModule } from 'projects/tots/form/src/public-api';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    TotsFormModule
+    TotsFormModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

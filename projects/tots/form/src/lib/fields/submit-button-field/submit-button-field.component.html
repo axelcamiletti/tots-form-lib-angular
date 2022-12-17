@@ -1,1 +1,5 @@
-<button mat-button type="button" [disabled]="!group.valid" (click)="onClick()">{{ field.label }}</button>
+<!-- <div class="dialog-actions">
+  <button mat-flat-button type="button" class="btn-close" aria-label="Close Dialog Button" mat-dialog-close>Close</button>
+</div> -->
+
+<button mat-flat-button type="button" class="btn-submit" aria-label="Submit Button" color="primary" [disabled]="!group.valid" (click)="onClick()">{{ field.label }}</button>

@@ -1,1 +1,7 @@
-button { width: 100%; }
+/* .dialog-actions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+} */
+
+button { min-width: 120px; }
