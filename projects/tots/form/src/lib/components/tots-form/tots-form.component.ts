@@ -13,6 +13,7 @@ export class TotsFormComponent implements OnInit {
 
   @Input() fields: Array<TotsFieldForm> = new Array<TotsFieldForm>();
   @Input() item: any;
+  @Input() autoSave: boolean = false;
 
   @Output() onAction = new EventEmitter<TotsActionForm>();
   privateActions = new Subject<TotsActionForm>();
@@ -58,5 +59,9 @@ export class TotsFormComponent implements OnInit {
       action.item = this.updateItemByForm();
       this.onAction.emit(action);
     });
+
+    if(this.autoSave){
+      this.group.valueChanges.subscribe(values => this.updateItemByForm());
+    }
   }
 }
